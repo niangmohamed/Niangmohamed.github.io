@@ -13,7 +13,8 @@
 <meta property="og:title" content="Mohamed Niang — Machine Learning Engineer" />
 <meta property="og:description" content="Production AI for luxury Maisons. ML Engineer at LVMH, founder of SetAIComply. GenAI, recommender systems, computer vision, NLP, MLOps." />
 <meta property="og:url" content="https://niangmohamed.github.io/" />
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/45575893?v=4&s=460" />
+<meta property="og:image" content="https://niangmohamed.github.io/images/portrait.jpg" />
+<meta property="og:image:alt" content="Mohamed Niang" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@Moha__niang" />
 
@@ -30,7 +31,7 @@
   "name": "Mohamed Niang",
   "jobTitle": "Machine Learning Engineer",
   "url": "https://niangmohamed.github.io/",
-  "image": "https://avatars.githubusercontent.com/u/45575893?v=4&s=460",
+  "image": "https://niangmohamed.github.io/images/portrait.jpg",
   "email": "mailto:niango777@gmail.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR" },
   "worksFor": { "@type": "Organization", "name": "LVMH" },
@@ -197,31 +198,26 @@ section{padding:110px 0;position:relative}
    ============================================================ */
 .hero{padding:104px 0 84px;overflow:hidden}
 @media (max-width:760px){.hero{padding:56px 0 60px}}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(0,.58fr);gap:56px;align-items:center}
-.hero-grid>*{min-width:0}
-@media (max-width:940px){.hero-grid{grid-template-columns:minmax(0,1fr);gap:48px}}
+.hero-copy{max-width:min(100%,900px)}
 .hero-kicker{
   display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-family:var(--mono);
   font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:26px;max-width:100%;
 }
 @media (max-width:420px){.hero-kicker{font-size:.66rem;letter-spacing:.12em}}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--bronze);box-shadow:0 0 0 4px var(--bronze-soft)}
-.hero h1{font-size:clamp(2.9rem,6.6vw,5.6rem);font-weight:300;letter-spacing:-.03em;line-height:1.02;margin-bottom:26px;text-wrap:balance}
+.hero h1{font-size:clamp(3rem,7.6vw,6.6rem);font-weight:300;letter-spacing:-.032em;line-height:1;margin-bottom:28px;text-wrap:balance}
 .hero h1 em{font-style:italic;color:var(--bronze)}
-.hero-sub{font-size:clamp(1.08rem,2vw,1.32rem);color:var(--muted);max-width:56ch;font-weight:300;margin-bottom:14px}
+.hero-sub{font-size:clamp(1.08rem,1.7vw,1.36rem);color:var(--muted);max-width:58ch;font-weight:300;margin-bottom:14px}
 .hero-sub strong{color:var(--text);font-weight:500}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-.hero-portrait{position:relative;justify-self:center;width:min(310px,80%);margin:0}
-@media (max-width:940px){.hero-portrait{width:min(240px,62%)}}
-.hero-portrait::before{
-  content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--bronze);
-  border-radius:190px 190px var(--radius) var(--radius);z-index:0;
+.byline{display:flex;align-items:center;gap:16px;margin:0 0 30px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.byline img{
+  width:76px;height:76px;flex:none;border-radius:50%;object-fit:cover;object-position:center 22%;
+  background:var(--ivory-2);box-shadow:0 0 0 1px var(--line),0 0 0 5px var(--bg),0 0 0 6px var(--bronze);
 }
-.hero-portrait img{
-  position:relative;z-index:1;width:100%;aspect-ratio:3/3.6;object-fit:cover;object-position:top center;
-  border-radius:190px 190px var(--radius) var(--radius);
-  background:var(--ivory-2);filter:saturate(.95);
-}
+.byline .who{font-family:var(--display);font-size:1.32rem;line-height:1.2}
+.byline .what{font-family:var(--mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--bronze);margin-top:5px}
+@media (max-width:480px){.byline img{width:62px;height:62px}.byline .who{font-size:1.15rem}}
 .hero-marks{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:64px;padding-top:26px;border-top:1px solid var(--line)}
 @media (max-width:680px){.hero-marks{grid-template-columns:1fr;gap:18px}}
 .hero-marks div{display:flex;flex-direction:column;gap:6px}
@@ -457,28 +453,20 @@ section{padding:110px 0;position:relative}
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <p class="hero-kicker"><span class="dot" aria-hidden="true"></span> Machine Learning Engineer &nbsp;·&nbsp; Paris, France</p>
-        <h1>Production AI for<br><em>luxury Maisons.</em></h1>
-        <p class="hero-sub">
-          I'm <strong>Mohamed Niang</strong> — ML Engineer at <strong>LVMH</strong>, where I design and ship
-          generative AI and recommendation systems that reach the Group's Maisons, and founder of
-          <strong>SetAIComply</strong>, making the EU AI Act workable for European SMEs.
-        </p>
-        <div class="hero-cta">
-          <a class="btn" href="#work">Selected work
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/mohamed-niang-ml/" target="_blank" rel="noopener">LinkedIn profile</a>
-        </div>
+    <div class="hero-copy">
+      <p class="hero-kicker"><span class="dot" aria-hidden="true"></span> Machine Learning Engineer &nbsp;·&nbsp; Paris, France</p>
+      <h1>Production AI for<br><em>luxury Maisons.</em></h1>
+      <p class="hero-sub">
+        I'm <strong>Mohamed Niang</strong> — ML Engineer at <strong>LVMH</strong>, where I design and ship
+        generative AI and recommendation systems that reach the Group's Maisons, and founder of
+        <strong>SetAIComply</strong>, making the EU AI Act workable for European SMEs.
+      </p>
+      <div class="hero-cta">
+        <a class="btn" href="#work">Selected work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/mohamed-niang-ml/" target="_blank" rel="noopener">LinkedIn profile</a>
       </div>
-
-      <figure class="hero-portrait">
-        <img src="images/portrait.jpg"
-             onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/45575893?v=4&s=520';"
-             alt="Portrait of Mohamed Niang" width="520" height="620" />
-      </figure>
     </div>
 
     <div class="hero-marks">
@@ -507,6 +495,13 @@ section{padding:110px 0;position:relative}
 
     <div class="about-grid" style="margin-top:44px">
       <div class="about-body reveal">
+        <div class="byline">
+          <img src="images/portrait.jpg" alt="Mohamed Niang" width="200" height="200" loading="lazy" decoding="async" />
+          <div>
+            <div class="who">Mohamed Niang</div>
+            <div class="what">ML Engineer @ LVMH · Founder @ SetAIComply</div>
+          </div>
+        </div>
         <p class="lead-first">
           I build machine learning systems that actually reach users. At <strong>LVMH</strong> I work on the
           <strong>ATOM AI platform</strong>, turning research into products the Group's Maisons rely on every day —
