@@ -1,184 +1,1039 @@
 <!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mohamed Niang — Machine Learning Engineer</title>
+<meta name="description" content="Mohamed Niang — Machine Learning Engineer at LVMH and founder of SetAIComply. Production GenAI, LLM &amp; RAG assistants, recommender systems, computer vision, NLP and MLOps. Based in Paris, France." />
+<meta name="author" content="Mohamed Niang" />
+<meta name="theme-color" content="#0C1D33" />
+<link rel="canonical" href="https://niangmohamed.github.io/" />
 
-<html>
-    <head>
-        <title>Mohamed Niang</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="icon" type="image/x-icon" href="images/icons.jpg" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-    </head>
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Mohamed Niang — Machine Learning Engineer" />
+<meta property="og:description" content="Production AI for luxury Maisons. ML Engineer at LVMH, founder of SetAIComply. GenAI, recommender systems, computer vision, NLP, MLOps." />
+<meta property="og:url" content="https://niangmohamed.github.io/" />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/45575893?v=4&s=460" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@Moha__niang" />
 
-    <body class="is-preload">
-        <!-- Header -->
-        <div id="header">
-            <div class="top">
-                <!-- Logo -->
-                <div id="logo">
-                    <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-                    <h1 id="title">Mohamed Niang</h1>
-                    <p>Software Engineer</p>
-                </div>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230C1D33'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23B08D57' text-anchor='middle'%3EMN%3C/text%3E%3C/svg%3E" />
 
-                <!-- Nav -->
-                <nav id="nav">
-                    <ul>
-                        <li>
-                            <a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a>
-                        </li>
-                        <li>
-                            <a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a>
-                        </li>
-                        <li>
-                            <a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a>
-                        </li>
-                        <li>
-                            <a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohamed Niang",
+  "jobTitle": "Machine Learning Engineer",
+  "url": "https://niangmohamed.github.io/",
+  "image": "https://avatars.githubusercontent.com/u/45575893?v=4&s=460",
+  "email": "mailto:niango777@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR" },
+  "worksFor": { "@type": "Organization", "name": "LVMH" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Universite Paris-Saclay" },
+    { "@type": "CollegeOrUniversity", "name": "ENSAE Pierre Ndiaye" }
+  ],
+  "knowsAbout": ["Generative AI","Large Language Models","Retrieval-Augmented Generation","Recommender Systems","Computer Vision","Natural Language Processing","MLOps","EU AI Act"],
+  "sameAs": [
+    "https://www.linkedin.com/in/mohamed-niang-ml/",
+    "https://github.com/niangmohamed",
+    "https://medium.com/@niango777",
+    "https://twitter.com/Moha__niang",
+    "https://www.setaicomply.com/"
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   Design tokens
+   ============================================================ */
+:root{
+  --ivory:#FBF8F3; --ivory-2:#F4EFE6; --paper:#FFFFFF;
+  --navy:#0C1D33; --navy-2:#16304F;
+  --bronze:#A87F45; --bronze-2:#C9A96A; --bronze-soft:rgba(168,127,69,.10);
+  --ink:#131820; --muted:#5C6878;
+  --line:rgba(12,29,51,.13); --line-strong:rgba(12,29,51,.24);
+  --bg:var(--ivory); --surface:var(--paper); --text:var(--ink);
+  --shadow:0 1px 2px rgba(12,29,51,.05), 0 12px 32px -18px rgba(12,29,51,.35);
+  --shadow-lg:0 2px 6px rgba(12,29,51,.06), 0 28px 60px -28px rgba(12,29,51,.45);
+  --radius:4px; --radius-lg:10px;
+  --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+[data-theme="dark"]{
+  --ivory:#080E18; --ivory-2:#0D1524; --paper:#0F1927;
+  --navy:#EDE6D9; --navy-2:#D8CFC0;
+  --bronze:#C9A96A; --bronze-2:#DCC189; --bronze-soft:rgba(201,169,106,.12);
+  --ink:#ECE6DC; --muted:#9AA6B7;
+  --line:rgba(237,230,217,.14); --line-strong:rgba(237,230,217,.28);
+  --bg:var(--ivory); --surface:var(--paper); --text:var(--ink);
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -20px rgba(0,0,0,.9);
+  --shadow-lg:0 2px 8px rgba(0,0,0,.45), 0 30px 64px -30px rgba(0,0,0,1);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-size:17px;line-height:1.65;font-weight:400;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E");
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px;border-radius:2px}
+::selection{background:var(--bronze);color:#fff}
+
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.1;margin:0;letter-spacing:-.01em}
+p{margin:0 0 1.1em}
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:28px;position:relative;z-index:1}
+@media (max-width:640px){.wrap{padding-inline:20px}}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:12px 18px;z-index:200}
+.skip:focus{left:12px;top:12px}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:color-mix(in srgb,var(--bg) 86%,transparent);
+  backdrop-filter:saturate(150%) blur(14px);-webkit-backdrop-filter:saturate(150%) blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s var(--ease),background .3s var(--ease);
+}
+.site-header.is-stuck{border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;gap:28px;height:74px}
+.brand{display:flex;align-items:center;gap:12px;margin-right:auto;font-family:var(--display);font-size:1.22rem;letter-spacing:.02em}
+.monogram{
+  width:36px;height:36px;flex:none;display:grid;place-items:center;
+  border:1px solid var(--bronze);color:var(--bronze);
+  font-family:var(--display);font-size:.92rem;letter-spacing:.06em;
+}
+.brand b{font-weight:500}
+.nav-links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0}
+.nav-links a{
+  font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;font-weight:500;
+  color:var(--muted);padding:6px 0;position:relative;transition:color .25s var(--ease);
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--bronze);
+  transition:right .35s var(--ease);
+}
+.nav-links a:hover,.nav-links a[aria-current="true"]{color:var(--text)}
+.nav-links a:hover::after,.nav-links a[aria-current="true"]::after{right:0}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.icon-btn{
+  width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--line);
+  background:transparent;color:var(--text);cursor:pointer;border-radius:50%;
+  transition:border-color .25s var(--ease),color .25s var(--ease),transform .25s var(--ease);
+}
+.icon-btn:hover{border-color:var(--bronze);color:var(--bronze);transform:translateY(-1px)}
+.icon-btn svg{width:17px;height:17px}
+[data-theme="dark"] .i-sun{display:block}[data-theme="dark"] .i-moon{display:none}
+[data-theme="light"] .i-sun{display:none}[data-theme="light"] .i-moon{display:block}
+.nav-toggle{display:none}
+@media (max-width:940px){
+  .nav-links{
+    position:fixed;inset:74px 0 auto 0;flex-direction:column;align-items:flex-start;gap:0;
+    background:var(--bg);border-bottom:1px solid var(--line);padding:8px 28px 26px;
+    transform:translateY(-14px);opacity:0;visibility:hidden;transition:.3s var(--ease);
+  }
+  .nav-links.open{transform:none;opacity:1;visibility:visible}
+  .nav-links li{width:100%;border-bottom:1px solid var(--line)}
+  .nav-links a{display:block;padding:15px 0;font-size:.85rem}
+  .nav-toggle{display:grid}
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:13px 26px;
+  font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  border:1px solid var(--navy);background:var(--navy);color:var(--bg);
+  transition:.3s var(--ease);cursor:pointer;
+}
+.btn:hover{background:transparent;color:var(--text);border-color:var(--bronze);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--text);border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--bronze);color:var(--bronze);background:transparent}
+.btn svg{width:15px;height:15px}
+
+/* ============================================================
+   Section furniture
+   ============================================================ */
+section{padding:110px 0;position:relative}
+@media (max-width:760px){section{padding:76px 0}}
+.eyebrow{
+  display:flex;align-items:center;gap:14px;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--bronze);margin:0 0 22px;
+}
+.eyebrow::after{content:"";height:1px;flex:1;max-width:90px;background:var(--bronze);opacity:.45}
+.eyebrow .num{opacity:.6}
+.section-title{font-size:clamp(2.3rem,5.2vw,3.6rem);font-weight:400;margin:0 0 18px;letter-spacing:-.02em}
+.section-lead{max-width:62ch;color:var(--muted);font-size:1.06rem}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero{padding:104px 0 84px;overflow:hidden}
+@media (max-width:760px){.hero{padding:56px 0 60px}}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(0,.58fr);gap:56px;align-items:center}
+.hero-grid>*{min-width:0}
+@media (max-width:940px){.hero-grid{grid-template-columns:minmax(0,1fr);gap:48px}}
+.hero-kicker{
+  display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-family:var(--mono);
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:26px;max-width:100%;
+}
+@media (max-width:420px){.hero-kicker{font-size:.66rem;letter-spacing:.12em}}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--bronze);box-shadow:0 0 0 4px var(--bronze-soft)}
+.hero h1{font-size:clamp(2.9rem,6.6vw,5.6rem);font-weight:300;letter-spacing:-.03em;line-height:1.02;margin-bottom:26px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--bronze)}
+.hero-sub{font-size:clamp(1.08rem,2vw,1.32rem);color:var(--muted);max-width:56ch;font-weight:300;margin-bottom:14px}
+.hero-sub strong{color:var(--text);font-weight:500}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero-portrait{position:relative;justify-self:center;width:min(310px,80%);margin:0}
+@media (max-width:940px){.hero-portrait{width:min(240px,62%)}}
+.hero-portrait::before{
+  content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--bronze);
+  border-radius:190px 190px var(--radius) var(--radius);z-index:0;
+}
+.hero-portrait img{
+  position:relative;z-index:1;width:100%;aspect-ratio:3/3.6;object-fit:cover;object-position:top center;
+  border-radius:190px 190px var(--radius) var(--radius);
+  background:var(--ivory-2);filter:saturate(.95);
+}
+.hero-marks{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:64px;padding-top:26px;border-top:1px solid var(--line)}
+@media (max-width:680px){.hero-marks{grid-template-columns:1fr;gap:18px}}
+.hero-marks div{display:flex;flex-direction:column;gap:6px}
+.hero-marks span{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze)}
+.hero-marks b{font-family:var(--sans);font-weight:600;font-size:.86rem;letter-spacing:.02em;color:var(--text)}
+
+/* ============================================================
+   Metrics strip
+   ============================================================ */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+@media (max-width:760px){.metrics{grid-template-columns:repeat(2,1fr)}}
+.metric{background:var(--bg);padding:30px 26px}
+.metric .v{font-family:var(--display);font-size:clamp(2rem,4vw,2.7rem);line-height:1;color:var(--bronze)}
+.metric .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+
+/* ============================================================
+   About
+   ============================================================ */
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:start}
+@media (max-width:940px){.about-grid{grid-template-columns:1fr;gap:44px}}
+.about-body p{font-size:1.08rem;color:var(--muted)}
+.about-body p strong{color:var(--text);font-weight:500}
+.lead-first::first-letter{
+  font-family:var(--display);float:left;font-size:4.2rem;line-height:.82;
+  padding:6px 12px 0 0;color:var(--bronze);
+}
+.facts{border-top:1px solid var(--line)}
+.fact{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.fact dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);padding-top:4px}
+.fact dd{margin:0;font-size:.95rem}
+.fact dd a{border-bottom:1px solid var(--line-strong);transition:border-color .25s var(--ease)}
+.fact dd a:hover{border-color:var(--bronze);color:var(--bronze)}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+@media (max-width:940px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){.grid-3,.grid-2{grid-template-columns:1fr}}
+.card{
+  background:var(--surface);border:1px solid var(--line);padding:32px 30px;position:relative;
+  transition:.35s var(--ease);overflow:hidden;
+}
+.card::after{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:var(--bronze);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--line-strong)}
+.card:hover::after{transform:scaleX(1)}
+.card h3{font-size:1.5rem;margin-bottom:12px}
+.card p{color:var(--muted);font-size:.95rem;margin:0}
+.card-icon{
+  width:42px;height:42px;display:grid;place-items:center;margin-bottom:20px;
+  border:1px solid var(--bronze);color:var(--bronze);border-radius:50%;
+}
+.card-icon svg{width:19px;height:19px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.chip{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;padding:4px 9px;
+  border:1px solid var(--line);color:var(--muted);border-radius:99px;white-space:nowrap;
+}
+.card:hover .chip{border-color:var(--line-strong)}
+
+/* ============================================================
+   Experience timeline
+   ============================================================ */
+.timeline{position:relative;margin-top:8px}
+.timeline::before{content:"";position:absolute;left:9px;top:10px;bottom:10px;width:1px;background:var(--line)}
+@media (max-width:680px){.timeline::before{left:6px}}
+.job{position:relative;padding:0 0 46px 46px}
+@media (max-width:680px){.job{padding-left:32px}}
+.job::before{
+  content:"";position:absolute;left:3px;top:9px;width:13px;height:13px;border-radius:50%;
+  background:var(--bg);border:1px solid var(--bronze);
+}
+@media (max-width:680px){.job::before{left:0}}
+.job.current::before{background:var(--bronze);box-shadow:0 0 0 5px var(--bronze-soft)}
+.job-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:6px}
+.job-head h3{font-size:1.62rem}
+.job-co{font-weight:600;color:var(--bronze);font-size:.95rem;letter-spacing:.02em}
+.job-meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.job ul{margin:0;padding-left:18px;color:var(--muted);font-size:.96rem}
+.job li{margin-bottom:7px}
+.job li::marker{color:var(--bronze)}
+
+/* ============================================================
+   Ventures / featured work
+   ============================================================ */
+.feature{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border:1px solid var(--line);
+  background:var(--surface);margin-bottom:26px;overflow:hidden;transition:.35s var(--ease);
+}
+.feature:hover{border-color:var(--line-strong);box-shadow:var(--shadow-lg)}
+@media (max-width:860px){.feature{grid-template-columns:1fr}}
+.feature-visual{
+  position:relative;min-height:250px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;
+  background:linear-gradient(150deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--bg);
+}
+[data-theme="dark"] .feature-visual{background:linear-gradient(150deg,#101B2C 0%,#16253C 100%);color:var(--text)}
+.feature-visual::after{
+  content:"";position:absolute;inset:0;opacity:.16;pointer-events:none;
+  background-image:radial-gradient(circle at 1px 1px,var(--bronze-2) 1px,transparent 0);background-size:22px 22px;
+}
+.feature-mark{font-family:var(--display);font-size:2.1rem;line-height:1.1;position:relative;z-index:1}
+.feature-tagline{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;opacity:.75;position:relative;z-index:1}
+.feature-body{padding:36px 38px}
+@media (max-width:640px){.feature-body{padding:30px 24px}.feature-visual{padding:28px 24px;min-height:170px}}
+.feature-body h3{font-size:1.9rem;margin-bottom:4px}
+.status{
+  display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.64rem;
+  letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;border-radius:99px;
+  border:1px solid var(--line-strong);color:var(--muted);margin-bottom:16px;
+}
+.status.live{color:#1E8A5F;border-color:rgba(30,138,95,.4)}
+.status.live .dot{background:#1E8A5F;box-shadow:0 0 0 3px rgba(30,138,95,.14)}
+.status.wip{color:var(--bronze);border-color:var(--bronze)}
+.status.wip .dot{background:var(--bronze)}
+.feature-body p{color:var(--muted);font-size:1rem}
+.link-arrow{
+  display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--text);margin-top:8px;
+  border-bottom:1px solid var(--bronze);padding-bottom:3px;transition:.25s var(--ease);
+}
+.link-arrow:hover{color:var(--bronze);gap:14px}
+.link-arrow svg{width:14px;height:14px}
+
+/* ============================================================
+   Repo cards
+   ============================================================ */
+.repo{display:flex;flex-direction:column;height:100%}
+.repo h3{font-size:1.16rem;font-family:var(--sans);font-weight:600;letter-spacing:-.005em;margin-bottom:10px;line-height:1.35}
+.repo p{flex:1;font-size:.92rem}
+.repo-meta{display:flex;align-items:center;gap:16px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.06em}
+.repo-meta .lang{display:inline-flex;align-items:center;gap:7px}
+.lang i{width:9px;height:9px;border-radius:50%;background:var(--bronze);display:inline-block}
+.lang.py i{background:#3572A5}.lang.ts i{background:#3178C6}.lang.html i{background:#E34C26}
+
+/* ============================================================
+   Writing
+   ============================================================ */
+.post{display:flex;align-items:baseline;gap:22px;padding:22px 0;border-bottom:1px solid var(--line);transition:.25s var(--ease)}
+.post:first-of-type{border-top:1px solid var(--line)}
+.post:hover{padding-left:10px}
+.post .idx{font-family:var(--mono);font-size:.7rem;color:var(--bronze);letter-spacing:.1em}
+.post h3{font-size:1.45rem;flex:1}
+.post:hover h3{color:var(--bronze)}
+.post .src{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:640px){.post{flex-wrap:wrap;gap:8px}.post h3{flex:1 1 100%;font-size:1.25rem}}
+
+/* ============================================================
+   Education / certifications
+   ============================================================ */
+.edu{padding:26px 0;border-bottom:1px solid var(--line)}
+.edu:first-child{border-top:1px solid var(--line)}
+.edu h3{font-size:1.42rem;margin-bottom:4px}
+.edu .school{color:var(--bronze);font-weight:600;font-size:.92rem}
+.edu .years{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.edu p{margin:10px 0 0;color:var(--muted);font-size:.93rem}
+.cert-list{list-style:none;margin:0;padding:0}
+.cert-list li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.93rem;color:var(--muted)}
+.cert-list li b{color:var(--text);font-weight:500}
+.cert-list li::before{content:"—";color:var(--bronze)}
+
+/* ============================================================
+   Contact + footer
+   ============================================================ */
+.contact{background:var(--navy);color:var(--ivory);padding:110px 0}
+[data-theme="dark"] .contact{background:var(--ivory-2);color:var(--text)}
+.contact .eyebrow{color:var(--bronze-2)}
+.contact .eyebrow::after{background:var(--bronze-2)}
+.contact h2{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:300;letter-spacing:-.025em;margin-bottom:22px}
+.contact p{color:rgba(251,248,243,.7);max-width:56ch;font-size:1.06rem}
+[data-theme="dark"] .contact p{color:var(--muted)}
+.contact .btn{background:var(--bronze);border-color:var(--bronze);color:#0C1D33}
+.contact .btn:hover{background:transparent;color:var(--bronze-2);border-color:var(--bronze-2)}
+.contact .btn-ghost{background:transparent;color:var(--ivory);border-color:rgba(251,248,243,.3)}
+[data-theme="dark"] .contact .btn-ghost{color:var(--text);border-color:var(--line-strong)}
+.contact .btn-ghost:hover{border-color:var(--bronze-2);color:var(--bronze-2)}
+.contact-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.site-footer{padding:34px 0;border-top:1px solid var(--line)}
+.footer-in{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:space-between;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.socials{display:flex;gap:10px}
+.socials a{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--muted);transition:.25s var(--ease)}
+.socials a:hover{color:var(--bronze);border-color:var(--bronze);transform:translateY(-2px)}
+.socials svg{width:15px;height:15px}
+
+/* ============================================================
+   Reveal
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+.to-top{
+  position:fixed;right:22px;bottom:22px;z-index:90;opacity:0;visibility:hidden;
+  transform:translateY(10px);transition:.3s var(--ease);background:var(--surface);box-shadow:var(--shadow)
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Mohamed Niang — home">
+      <span class="monogram" aria-hidden="true">MN</span>
+      <span><b>Mohamed</b> Niang</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch colour theme">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-kicker"><span class="dot" aria-hidden="true"></span> Machine Learning Engineer &nbsp;·&nbsp; Paris, France</p>
+        <h1>Production AI for<br><em>luxury Maisons.</em></h1>
+        <p class="hero-sub">
+          I'm <strong>Mohamed Niang</strong> — ML Engineer at <strong>LVMH</strong>, where I design and ship
+          generative AI and recommendation systems that reach the Group's Maisons, and founder of
+          <strong>SetAIComply</strong>, making the EU AI Act workable for European SMEs.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#work">Selected work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/mohamed-niang-ml/" target="_blank" rel="noopener">LinkedIn profile</a>
         </div>
+      </div>
 
-        <!-- Main -->
-        <div id="main">
-            <!-- Intro -->
-            <section id="top" class="one dark cover">
-                <div class="container">
-                    <header>
-                        <h2 align="center" class="alt">Hi! I'm <strong>Mohamed Niang</strong>, <strong>machine learning scientist</strong> and <strong>deep learner</strong>. I like to build something with <strong>Neural Network's</strong>.</h2>
-                        <p align="center">
-                            I like to learn <strong>new things</strong> and based on it to <strong>write repositories on Github</strong>.
-                            I'm a big fan of large languages modeling (LLM) and human level vision AI technologies based on Transformers (Attention Network's). 
-                            I am currently a software engineer at IBM, working on Pure MLOps for Recommender System.
-                        </p>
-                    </header>
-                </div>
-            </section>
+      <figure class="hero-portrait">
+        <img src="images/portrait.jpg"
+             onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/45575893?v=4&s=520';"
+             alt="Portrait of Mohamed Niang" width="520" height="620" />
+      </figure>
+    </div>
 
-            <!-- Portfolio -->
-            <section id="portfolio" class="two">
-                <div class="container">
-                    <header>
-                        <h2>Portfolio</h2>
-                    </header>
+    <div class="hero-marks">
+      <div><span>Currently</span> <b>LVMH — ATOM AI platform</b></div>
+      <div><span>Previously</span> <b>IBM · Carrefour · FeetMe</b></div>
+      <div><span>Trained at</span> <b>Université Paris-Saclay · ENSAE</b></div>
+    </div>
+  </div>
+</section>
 
-                    <p align="justify">
-                        Here are some of my <strong>works</strong> on Github and my <strong>publications</strong> on Medium. All these <strong>publications</strong> focus on <strong>data science</strong> and
-                        <strong>artificial intelligence</strong>. You'll find topics like <strong>programming on Python</strong> and other topics like <strong>computer vision for autonomous cars</strong>, and so on.
-                    </p>
+<!-- ===================== METRICS ===================== -->
+<div class="wrap">
+  <div class="metrics reveal">
+    <div class="metric"><div class="v">6+</div><div class="k">Years in ML &amp; data</div></div>
+    <div class="metric"><div class="v">60+</div><div class="k">Open-source repos</div></div>
+    <div class="metric"><div class="v">19</div><div class="k">Certifications</div></div>
+    <div class="metric"><div class="v">2</div><div class="k">Products founded</div></div>
+  </div>
+</div>
 
-                    <div class="row">
-                        <div class="col-4 col-12-mobile">
-                            <article class="item">
-                                <a href="https://github.com/Niangmohamed/The-Fundamentals-of-Python" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-                                <header>
-                                    <h3>The Fundamentals of Python</h3>
-                                </header>
-                            </article>
-                            <article class="item">
-                                <a href="https://github.com/Niangmohamed/Computer-Vision-for-Autonomous-Cars" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-                                <header>
-                                    <h3>Computer Vision for Self Driving Cars</h3>
-                                </header>
-                            </article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item">
-                                <a href="https://medium.com/@niango777/introduction-to-tensorflow-eca6dac1dfb0" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-                                <header>
-                                    <h3>Introduction to Tensorflow</h3>
-                                </header>
-                            </article>
-                            <article class="item">
-                                <a href="https://medium.com/@niango777/bigquery-basics-29bd626e3e15" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-                                <header>
-                                    <h3>Introduction to BigQuery</h3>
-                                </header>
-                            </article>
-                        </div>
-                        <div class="col-4 col-12-mobile">
-                            <article class="item">
-                                <a href="https://github.com/Niangmohamed/Human-Activity-Recognition" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-                                <header>
-                                    <h3>Human Activity Recognition with ML</h3>
-                                </header>
-                            </article>
-                            <article class="item">
-                                <a href="https://github.com/Niangmohamed/APIs-Web-Scraping-in-Python" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-                                <header>
-                                    <h3>APIs & Web Scraping in Python</h3>
-                                </header>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">01</span> About</p>
+    <h2 class="section-title">From research notebook<br>to production system.</h2>
 
-            <!-- About Me -->
-            <section id="about" class="three">
-                <div class="container">
-                    <header>
-                        <h2>About Me</h2>
-                    </header>
+    <div class="about-grid" style="margin-top:44px">
+      <div class="about-body reveal">
+        <p class="lead-first">
+          I build machine learning systems that actually reach users. At <strong>LVMH</strong> I work on the
+          <strong>ATOM AI platform</strong>, turning research into products the Group's Maisons rely on every day —
+          clienteling assistants, recommendation engines, forecasting, marketing science, computer vision and NLP —
+          shipped as reusable <strong>Dataiku DSS plugins</strong> and <strong>Google Cloud micro-services</strong>.
+        </p>
+        <p>
+          My path runs from statistics to engineering: a statistical engineering degree at <strong>ENSAE Pierre Ndiaye</strong>,
+          a Master's in Data Science at <strong>Université Paris-Saclay</strong>, then data science at
+          <strong>FeetMe</strong> and <strong>Carrefour</strong>, and MLOps for recommender systems at <strong>IBM</strong>.
+          That mix is why I care as much about evaluation, monitoring and documentation as about the model itself.
+        </p>
+        <p>
+          In 2026 I founded <strong>SetAIComply</strong>, an AI-Act-native compliance platform for European SMEs.
+          Working on it convinced me that <strong>Responsible AI</strong> is an engineering problem before it is a legal one —
+          which is exactly where I like to work.
+        </p>
+      </div>
 
-                    <a href="#about" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+      <dl class="facts reveal">
+        <div class="fact"><dt>Based in</dt><dd>Paris, Île-de-France · Hybrid &amp; remote</dd></div>
+        <div class="fact"><dt>Role</dt><dd>ML Engineer @ LVMH · Founder @ SetAIComply</dd></div>
+        <div class="fact"><dt>Focus</dt><dd>GenAI &amp; LLMs · Recommender systems · MLOps · AI governance</dd></div>
+        <div class="fact"><dt>Languages</dt><dd>French · English</dd></div>
+        <div class="fact"><dt>Writing</dt><dd><a href="https://medium.com/@niango777" target="_blank" rel="noopener">Medium</a></dd></div>
+        <div class="fact"><dt>Code</dt><dd><a href="https://github.com/niangmohamed" target="_blank" rel="noopener">github.com/niangmohamed</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
 
-                    <p align="justify">
-                        I am currently a senior machine learning engineer at IBM. I recently completed my master's degrees in data science at Paris-Saclay University. I am passionate about developing and applying
-                        machine learning methods for building algorithms and predictive models using a variety of datasets for solving impactful real world problems. I learn continuously hard on projects regarding machine learning, deep learning and robotics. I am currently interested in the field of natural language processing (Attention Network's), data science and cloud computing.
-                    </p>
-                </div>
-            </section>
+<hr class="rule" />
 
-            <!-- Contact -->
-            <section id="contact" class="four">
-                <div class="container">
-                    <header>
-                        <h2>Contact</h2>
-                    </header>
+<!-- ===================== EXPERTISE ===================== -->
+<section id="expertise">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">02</span> Expertise</p>
+    <h2 class="section-title">What I do</h2>
+    <p class="section-lead">Six areas where I have shipped systems into production, not just prototypes.</p>
 
-                    <p align="center">Here are links to connect to my networks or to contact me.</p>
+    <div class="grid-3" style="margin-top:48px">
+      <article class="card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v1a3 3 0 0 0 0 6v1a4 4 0 0 0 8 0v-1a3 3 0 0 0 0-6V7a4 4 0 0 0-4-4z"/><path d="M12 3v18"/></svg></div>
+        <h3>GenAI &amp; LLMs</h3>
+        <p>RAG assistants and agentic workflows in production — retrieval design, prompt and context engineering, evaluation harnesses, and reverse-explainability for LLM answers.</p>
+        <div class="chips"><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">llama-index</span><span class="chip">pgvector</span><span class="chip">Vertex AI</span></div>
+      </article>
 
-                    <div class="bottom">
-                        <!-- Social Icons -->
-                        <ul class="icons">
-                            <li>
-                                <a href="https://www.linkedin.com/in/mohamed-niang-45a698133/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/Niangmohamed" class="icon brands fa-github"><span class="label">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/Moha__niang" class="icon brands fa-twitter"><span class="label">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="https://medium.com/@niango777" class="icon brands fa-medium"><span class="label">Medium</span></a>
-                            </li>
-                            <li>
-                                <a href="mailto:niango777@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+      <article class="card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="17" r="2.5"/><path d="M7.6 8.9 10.6 15M16.4 8.9 13.4 15M8.5 7h7"/></svg></div>
+        <h3>Recommender systems</h3>
+        <p>Two-Tower retrieval with Deep &amp; Cross Networks for cold-start, sequential models tuned with Direct Preference Optimization, embedding-based companion products and style clustering.</p>
+        <div class="chips"><span class="chip">TF Recommenders</span><span class="chip">DCN</span><span class="chip">LSTM + DPO</span><span class="chip">Word2Vec</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg></div>
+        <h3>Computer vision &amp; NLP</h3>
+        <p>Product image embeddings with CLIP and NASNet, colour quantization and blur scoring with OpenCV, multilingual text embeddings, topic and keyword extraction at catalogue scale.</p>
+        <div class="chips"><span class="chip">CLIP</span><span class="chip">OpenCV</span><span class="chip">sentence-transformers</span><span class="chip">BERTopic</span><span class="chip">UMAP</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20V11M11 20V5M16 20v-6M21 20v-9"/></svg></div>
+        <h3>Marketing science</h3>
+        <p>Deep-learning attribution models and Marketing Mix Modeling in both Bayesian and OLS flavours, connecting media investment to measurable commercial outcomes.</p>
+        <div class="chips"><span class="chip">MMM</span><span class="chip">Bayesian inference</span><span class="chip">Attribution</span><span class="chip">Uplift</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6 3.5 7v10L12 21.4 20.5 17V7L12 2.6z"/><path d="M12 12 3.5 7M12 12l8.5-5M12 12v9.4"/></svg></div>
+        <h3>MLOps &amp; platform</h3>
+        <p>Reusable plugins and micro-services, experiment tracking, hyper-parameter search, containerised deployments, CI/CD and observability — so a model keeps working after launch day.</p>
+        <div class="chips"><span class="chip">Dataiku DSS</span><span class="chip">MLflow</span><span class="chip">Docker</span><span class="chip">FastAPI</span><span class="chip">GitHub Actions</span><span class="chip">OpenTelemetry</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 4.5 6v6c0 4.6 3.2 7.9 7.5 9.2 4.3-1.3 7.5-4.6 7.5-9.2V6L12 2.8z"/><path d="m9 12 2.2 2.2L15.4 10"/></svg></div>
+        <h3>AI governance</h3>
+        <p>EU AI Act conformity in practice: risk classification, Annex IV technical documentation, evidence automation and Responsible AI guardrails designed for teams without a legal department.</p>
+        <div class="chips"><span class="chip">EU AI Act</span><span class="chip">Annex IV</span><span class="chip">Risk classification</span><span class="chip">Model cards</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">03</span> Experience</p>
+    <h2 class="section-title">Where I have worked</h2>
+
+    <div class="timeline" style="margin-top:48px">
+      <article class="job current reveal">
+        <div class="job-head"><h3>Machine Learning Engineer</h3><span class="job-co">LVMH</span></div>
+        <p class="job-meta">Jan 2025 — Present · Paris, France · Hybrid</p>
+        <ul>
+          <li>ML Engineer on the <b>ATOM AI platform</b>, delivering production ML &amp; GenAI products to the Group's Maisons as reusable Dataiku DSS plugins and GCP micro-services.</li>
+          <li>Built a <b>RAG-powered clienteling assistant</b> for advisors (LangChain, LangGraph, Vertex AI, FastAPI, PostgreSQL/pgvector) and a Responsible-AI reverse-explainability layer for LLM answers.</li>
+          <li>Designed <b>Two-Tower retrieval</b> with Deep &amp; Cross Networks for cold-start, an LSTM sequential recommender trained with Direct Preference Optimization, and embedding-based companion products.</li>
+          <li>Shipped computer vision and NLP pipelines: CLIP and NASNet image embeddings, colour quantization and blur scoring, multilingual embeddings, BERTopic and KeyBERT.</li>
+          <li>Delivered <b>marketing science</b> models: deep-learning attribution and Bayesian / OLS Marketing Mix Modeling.</li>
+        </ul>
+      </article>
+
+      <article class="job current reveal">
+        <div class="job-head"><h3>Founder</h3><span class="job-co">SetAIComply</span></div>
+        <p class="job-meta">Jul 2026 — Present · Paris, France</p>
+        <ul>
+          <li>Founded an <b>AI-Act-native compliance platform</b> for European SMEs: classify AI systems, generate Annex IV technical documentation and stay compliant in 24 EU languages.</li>
+          <li>Self-serve product built on <b>FastAPI</b> and <b>Next.js</b>, with a compliance lab producing continuous CI evidence for a governed AI system.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-head"><h3>Senior Machine Learning Engineer</h3><span class="job-co">IBM</span></div>
+        <p class="job-meta">Apr 2023 — Sep 2024 · Bois-Colombes, France · Hybrid</p>
+        <ul>
+          <li>Built and maintained AI software modules for client projects (SharePoint and Azure I/O connectors, Snowflake data loaders) with unit tests and Sphinx documentation.</li>
+          <li>Contributed to a <b>ChatGPT-style generative AI application</b>: Cosmos DB backend for chats and users, plus UX work on the web app.</li>
+          <li>Led data and module migrations (Azure SQL → Snowflake, AzureRM → Az), production bug fixing and code-quality improvements.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-head"><h3>Machine Learning Engineer</h3><span class="job-co">IBM</span></div>
+        <p class="job-meta">Apr 2022 — Apr 2023 · Bois-Colombes, France</p>
+        <ul>
+          <li><b>Pure MLOps for recommender systems</b>: "customers also bought", complementary products, similar products and product search.</li>
+          <li>Engineered containerisation, CI/CD pipelines, runbooks, data loaders, tracing and web services on <b>Microsoft Azure</b> (Cosmos DB, App Services, Batch, Application Insights).</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-head"><h3>Data Scientist</h3><span class="job-co">Carrefour</span></div>
+        <p class="job-meta">Jan 2021 — Jan 2022 · Massy, France</p>
+        <ul>
+          <li>Built <b>fraud-prevention analytics</b> on Google Cloud: advanced BigQuery models, automated ETL pipelines triggered through Pub/Sub and Cloud Functions, reporting dashboards.</li>
+          <li>Automated email fraud alerts with n8n and web scraping; applied unsupervised anomaly detection for labelling and supervised deep learning for prediction.</li>
+          <li>Operated the full <b>Vertex AI</b> lifecycle: custom training jobs, TensorBoard comparison, endpoints, monitoring and pipelines.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-head"><h3>Data Scientist</h3><span class="job-co">FeetMe</span></div>
+        <p class="job-meta">May 2020 — Oct 2020 · Paris, France</p>
+        <ul>
+          <li>Developed a feature-engineering module for <b>human activity recognition</b> from smartphone and wearable sensor recordings.</li>
+          <li>Modelled activity with penalized elastic-net logistic regression and decision trees under a strong validation protocol, on a GCP data stack.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== WORK / VENTURES ===================== -->
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">04</span> Selected work</p>
+    <h2 class="section-title">Products &amp; platforms</h2>
+    <p class="section-lead">Things I have built or am building — in production, in the open, or in progress.</p>
+
+    <div style="margin-top:48px">
+      <article class="feature reveal">
+        <div class="feature-visual">
+          <p class="feature-tagline">Founder · 2026</p>
+          <p class="feature-mark">SetAI<br>Comply</p>
+          <p class="feature-tagline">EU AI Act · SaaS</p>
         </div>
-
-        <!-- Footer -->
-        <div id="footer">
-            <!-- Copyright -->
-            <ul class="copyright">
-                <li>&copy; Mohamed Niang. All rights reserved.</li>
-            </ul>
+        <div class="feature-body">
+          <span class="status live"><span class="dot" aria-hidden="true"></span> Live</span>
+          <h3>SetAIComply</h3>
+          <p>
+            AI-Act-native compliance software for European SMEs. Classify your AI systems against the risk tiers,
+            generate Annex IV technical documentation, and keep evidence current — self-serve, in 24 EU languages,
+            starting from €0. Built with FastAPI and Next.js, with a compliance lab that produces continuous CI evidence.
+          </p>
+          <div class="chips" style="margin-bottom:18px">
+            <span class="chip">FastAPI</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">PostgreSQL</span><span class="chip">EU AI Act</span>
+          </div>
+          <a class="link-arrow" href="https://www.setaicomply.com/" target="_blank" rel="noopener">Visit setaicomply.com
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
         </div>
+      </article>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+      <article class="feature reveal">
+        <div class="feature-visual">
+          <p class="feature-tagline">LVMH · ATOM AI platform</p>
+          <p class="feature-mark">Clienteling<br>&amp; recommendation</p>
+          <p class="feature-tagline">GenAI · RecSys · Responsible AI</p>
+        </div>
+        <div class="feature-body">
+          <span class="status"><span class="dot" aria-hidden="true"></span> Ongoing</span>
+          <h3>Production AI for the Maisons</h3>
+          <p>
+            A family of ML and GenAI products delivered on LVMH's ATOM AI platform: a RAG clienteling assistant for
+            advisors, Two-Tower and sequential recommenders, product image and text embeddings, and a
+            reverse-explainability layer that makes LLM answers auditable. Packaged as reusable Dataiku DSS plugins
+            and GCP micro-services so several Maisons can adopt the same building blocks.
+          </p>
+          <div class="chips" style="margin-bottom:18px">
+            <span class="chip">LangGraph</span><span class="chip">Vertex AI</span><span class="chip">TensorFlow Recommenders</span><span class="chip">pgvector</span><span class="chip">Dataiku DSS</span>
+          </div>
+          <p style="font-size:.82rem;color:var(--muted);margin:0">Internal platform — no confidential detail shared.</p>
+        </div>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-visual">
+          <p class="feature-tagline">Side project · 2026</p>
+          <p class="feature-mark">Citez<br>Moi</p>
+          <p class="feature-tagline">AI visibility · SEO for LLMs</p>
+        </div>
+        <div class="feature-body">
+          <span class="status wip"><span class="dot" aria-hidden="true"></span> In development</span>
+          <h3>CitezMoi</h3>
+          <p>
+            Get cited by ChatGPT. An AI-visibility audit for French-speaking SMEs and agencies: measure how — and
+            whether — assistants mention your brand, receive generated fixes, and track the effect week after week.
+          </p>
+          <div class="chips"><span class="chip">LLM evaluation</span><span class="chip">Web crawling</span><span class="chip">Reporting</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== OPEN SOURCE ===================== -->
+<section id="opensource">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">05</span> Open source</p>
+    <h2 class="section-title">Code in the open</h2>
+    <p class="section-lead">A selection from 60+ public repositories — mostly hands-on notebooks I wrote while learning something properly.</p>
+
+    <div class="grid-3" style="margin-top:48px">
+      <a class="card repo reveal" href="https://github.com/niangmohamed/Computer-Vision-for-Autonomous-Cars" target="_blank" rel="noopener">
+        <h3>Computer Vision for Autonomous Cars</h3>
+        <p>How self-driving perception actually works: lane detection, object detection and tracking, LiDAR — explained and implemented.</p>
+        <div class="repo-meta"><span class="lang py"><i></i>Jupyter</span><span>★ 21</span><span>MIT</span></div>
+      </a>
+
+      <a class="card repo reveal" href="https://github.com/niangmohamed/Reinforcement-Learning-Specialization" target="_blank" rel="noopener">
+        <h3>Reinforcement Learning Specialization</h3>
+        <p>A complete walk-through of the University of Alberta <em>Fundamentals of Reinforcement Learning</em> specialization.</p>
+        <div class="repo-meta"><span class="lang py"><i></i>Jupyter</span><span>★ 15</span><span>MIT</span></div>
+      </a>
+
+      <a class="card repo reveal" href="https://github.com/niangmohamed/GCP-Professional-Data-Engineer-Learning-Path" target="_blank" rel="noopener">
+        <h3>GCP Professional Data Engineer Path</h3>
+        <p>The full learning path I followed to become Google Cloud Professional Data Engineer certified, with labs and notes.</p>
+        <div class="repo-meta"><span class="lang py"><i></i>Jupyter</span><span>★ 11</span><span>MIT</span></div>
+      </a>
+
+      <a class="card repo reveal" href="https://github.com/niangmohamed/Human-Activity-Recognition" target="_blank" rel="noopener">
+        <h3>Human Activity Recognition</h3>
+        <p>Activity recognition from wearable inertial sensor networks — feature engineering, model selection and a rigorous validation protocol.</p>
+        <div class="repo-meta"><span class="lang py"><i></i>Jupyter</span><span>★ 7</span><span>MIT</span></div>
+      </a>
+
+      <a class="card repo reveal" href="https://github.com/niangmohamed/Virtual-Adversarial-Training" target="_blank" rel="noopener">
+        <h3>Virtual Adversarial Training</h3>
+        <p>A Keras implementation of the original VAT paper for semi-supervised learning, reproduced from scratch.</p>
+        <div class="repo-meta"><span class="lang py"><i></i>Jupyter</span><span>★ 4</span><span>MIT</span></div>
+      </a>
+
+      <a class="card repo reveal" href="https://github.com/niangmohamed/Data-Science-With-Python" target="_blank" rel="noopener">
+        <h3>Data Science With Python</h3>
+        <p>A practical introduction to data science with Python: pandas, NumPy and matplotlib, from first import to first model.</p>
+        <div class="repo-meta"><span class="lang py"><i></i>Jupyter</span><span>★ 4</span><span>MIT</span></div>
+      </a>
+    </div>
+
+    <p style="margin-top:32px">
+      <a class="link-arrow" href="https://github.com/niangmohamed?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </p>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== WRITING ===================== -->
+<section id="writing">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">06</span> Writing</p>
+    <h2 class="section-title">Notes &amp; tutorials</h2>
+    <p class="section-lead">I write on Medium about the tools I use day to day — mostly the explanation I wish I had found first.</p>
+
+    <div style="margin-top:44px">
+      <a class="post reveal" href="https://medium.com/@niango777/introduction-to-tensorflow-eca6dac1dfb0" target="_blank" rel="noopener">
+        <span class="idx">01</span><h3>Introduction to TensorFlow</h3><span class="src">Medium</span>
+      </a>
+      <a class="post reveal" href="https://medium.com/@niango777/bigquery-basics-29bd626e3e15" target="_blank" rel="noopener">
+        <span class="idx">02</span><h3>BigQuery Basics</h3><span class="src">Medium</span>
+      </a>
+      <a class="post reveal" href="https://medium.com/@niango777" target="_blank" rel="noopener">
+        <span class="idx">→</span><h3>All articles on Medium</h3><span class="src">@niango777</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">07</span> Education</p>
+    <h2 class="section-title">Training &amp; credentials</h2>
+
+    <div class="grid-2" style="margin-top:48px;gap:56px">
+      <div class="reveal">
+        <article class="edu">
+          <p class="years">2019 — 2020</p>
+          <h3>MSc Mathematics &amp; Applications — Data Science</h3>
+          <p class="school">Université Paris-Saclay</p>
+          <p>Co-accredited with CentraleSupélec, École Polytechnique, ENS Paris-Saclay, ENSAE Paris, Télécom SudParis and ENSIIE. Machine learning, deep learning, Bayesian learning, high-dimensional statistics, optimization, GPU programming and big data.</p>
+        </article>
+        <article class="edu">
+          <p class="years">2015 — 2019</p>
+          <h3>Engineering degree — Statistics &amp; Business Analytics</h3>
+          <p class="school">ENSAE Pierre Ndiaye</p>
+          <p>Probability, estimation and test theory, econometrics, time series, survey theory, data mining, databases and data warehousing, statistical software (R, SAS, Stata).</p>
+        </article>
+      </div>
+
+      <div class="reveal">
+        <p class="eyebrow" style="margin-bottom:18px"><span class="num">19</span> Certifications</p>
+        <ul class="cert-list">
+          <li><b>Professional Data Engineer</b> — Google Cloud</li>
+          <li><b>Machine Learning</b> — Duke University</li>
+          <li><b>NLP with Classification and Vector Spaces</b> — DeepLearning.AI</li>
+          <li><b>How Google Does Machine Learning</b> — Google</li>
+          <li><b>Smart Analytics, ML and AI on Google Cloud</b> — Google</li>
+          <li><b>Serverless Data Processing with Dataflow</b> (3 parts) — Google</li>
+          <li><b>Modernizing Data Lakes and Data Warehouses</b> — Google</li>
+          <li><b>Building Resilient Streaming Analytics Systems</b> — Google</li>
+          <li><b>Enterprise Design Thinking</b> — Co-Creator &amp; Practitioner — IBM</li>
+          <li><b>Exploratory Multivariate Data Analysis</b> — MyMoocs</li>
+        </ul>
+        <p style="margin-top:20px">
+          <a class="link-arrow" href="https://www.linkedin.com/in/mohamed-niang-ml/details/certifications/" target="_blank" rel="noopener">See all 19 on LinkedIn
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow"><span class="num">08</span> Contact</p>
+    <h2>Let's build something<br>worth shipping.</h2>
+    <p>
+      I'm always happy to talk about applied GenAI in production, recommender systems at scale,
+      or making the EU AI Act workable for small teams. Speaking, collaboration and interesting
+      problems all welcome.
+    </p>
+    <div class="contact-links">
+      <a class="btn" href="mailto:niango777@gmail.com">niango777@gmail.com</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/mohamed-niang-ml/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/niangmohamed" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="https://www.setaicomply.com/" target="_blank" rel="noopener">SetAIComply</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-in">
+    <span>© <span id="year">2026</span> Mohamed Niang · Paris, France</span>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/mohamed-niang-ml/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C20.6 8.75 21 11 21 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.03-3.34-2.04 0-2.35 1.59-2.35 3.23V21H9z"/></svg>
+      </a>
+      <a href="https://github.com/niangmohamed" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.72c-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.570 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.79-4.57 5.04.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.06 10.06 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+      </a>
+      <a href="https://medium.com/@niango777" target="_blank" rel="noopener" aria-label="Medium">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.4-3.38 6.4-1.87 0-3.39-2.86-3.39-6.4s1.52-6.4 3.39-6.4S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.74-1.19 5.74-.66 0-1.19-2.57-1.19-5.74s.53-5.74 1.19-5.74C23.47 6.26 24 8.83 24 12z"/></svg>
+      </a>
+      <a href="https://twitter.com/Moha__niang" target="_blank" rel="noopener" aria-label="X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.22-6.82-5.97 6.82H1.66l7.73-8.83L1.25 2.25h6.82l4.71 6.23zm-1.16 17.52h1.83L7.01 4.13H5.05z"/></svg>
+      </a>
+      <a href="mailto:niango777@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<button class="icon-btn to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script>
+(function () {
+  "use strict";
+
+  var root = document.documentElement;
+  var STORE = "mn-theme";
+
+  /* ---------- Theme ---------- */
+  function readStored() {
+    try { return localStorage.getItem(STORE); } catch (e) { return null; }
+  }
+  function store(v) {
+    try { localStorage.setItem(STORE, v); } catch (e) { /* private mode */ }
+  }
+  function apply(theme) {
+    root.setAttribute("data-theme", theme);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", theme === "dark" ? "#080E18" : "#0C1D33");
+  }
+
+  var stored = readStored();
+  var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  apply(stored || (prefersDark ? "dark" : "light"));
+
+  var themeBtn = document.getElementById("themeBtn");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      apply(next);
+      store(next);
+    });
+  }
+  if (window.matchMedia) {
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    var onChange = function (e) { if (!readStored()) apply(e.matches ? "dark" : "light"); };
+    if (mq.addEventListener) mq.addEventListener("change", onChange);
+    else if (mq.addListener) mq.addListener(onChange);
+  }
+
+  /* ---------- Mobile nav ---------- */
+  var navToggle = document.getElementById("navToggle");
+  var navLinks = document.getElementById("navLinks");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", function () {
+      var open = navLinks.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    });
+    navLinks.addEventListener("click", function (e) {
+      if (e.target.closest("a")) {
+        navLinks.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && navLinks.classList.contains("open")) {
+        navLinks.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.focus();
+      }
+    });
+  }
+
+  /* ---------- Sticky header + back to top ---------- */
+  var header = document.getElementById("siteHeader");
+  var toTop = document.getElementById("toTop");
+  var onScroll = function () {
+    var y = window.scrollY || window.pageYOffset;
+    if (header) header.classList.toggle("is-stuck", y > 8);
+    if (toTop) toTop.classList.toggle("show", y > 700);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealables = document.querySelectorAll(".reveal");
+  if (reduce || !("IntersectionObserver" in window)) {
+    Array.prototype.forEach.call(revealables, function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.06 });
+    Array.prototype.forEach.call(revealables, function (el, i) {
+      el.style.transitionDelay = (Math.min(i % 3, 2) * 90) + "ms";
+      io.observe(el);
+    });
+  }
+
+  /* ---------- Scroll spy ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  var sections = links
+    .map(function (a) { return document.querySelector(a.getAttribute("href")); })
+    .filter(Boolean);
+
+  if (sections.length && "IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (a) {
+          a.toggleAttribute("aria-current", a.getAttribute("href") === "#" + entry.target.id);
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---------- Year ---------- */
+  var year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
 </html>
